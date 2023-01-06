@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Space Mono', monospace;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
