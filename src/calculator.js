@@ -1,4 +1,4 @@
-const calculator = () => {
+export const calculator = () => {
 
     const calculateTip = (total, percentage) => {
         const num = percentage / 100;
@@ -20,4 +20,5 @@ const calculator = () => {
 
 };
 
-module.exports = calculator;
+// for testing with jest
+// module.exports = calculator;
