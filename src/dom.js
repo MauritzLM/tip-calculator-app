@@ -1,7 +1,7 @@
 
 // display amount function
 export const displayAmount = (element, amount) => {
-    element.textContent = `$ ${amount.toLocaleString("en-GB", { minimumFractionDigits: 2 })}`;
+    element.textContent = `$${amount.toLocaleString("en-GB", { minimumFractionDigits: 2 })}`;
 }
 
 export const getTipPercentage = (arr, value, style) => {
