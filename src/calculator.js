@@ -9,6 +9,11 @@ export const calculator = () => {
 
     // calculate tip per person
     const tipPerPerson = (tipAmount, numberOfPeople) => {
+
+        if (!tipAmount) {
+            return (0).toFixed(2);
+        }
+
         if (!numberOfPeople) {
             return (tipAmount).toFixed(2);
         }
@@ -20,8 +25,12 @@ export const calculator = () => {
     const totalPerPerson = (total, tipAmount, numberOfPeople) => {
         const totalPlusTip = tipAmount + total;
 
-        if (!numberOfPeople || !tipAmount) {
+        if (!numberOfPeople) {
             return Number(total).toFixed(2);
+        }
+
+        if (!tipAmount) {
+            return (total / numberOfPeople).toFixed(2);
         }
 
         return (totalPlusTip / numberOfPeople).toFixed(2);
