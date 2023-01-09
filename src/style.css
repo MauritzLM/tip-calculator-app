@@ -55,6 +55,7 @@ label,
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    gap: .7em;
     /* position: relative;
     top: 20%; */
 }
@@ -78,8 +79,9 @@ input {
 
 .input-section img {
     position: relative;
-    bottom: 1.72em;
+    bottom: 1.28em;
     left: .5em;
+    display: inherit;
 }
 
 /* .dollar-icon {
@@ -126,15 +128,18 @@ input[type=number] {
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
     padding: 1.5em 1em 1em 1em;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* flex-direction: column; */
     gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .amount-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: max-content;
 }
 
 /* .amount-container p {
@@ -160,14 +165,13 @@ input[type=number] {
     padding-bottom: .4em;
     font-size: 2rem;
     cursor: pointer;
+    display: block;
 }
 
 .selected {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }
-
-
 
 .attribution {
     font-size: 11px;
@@ -178,4 +182,30 @@ input[type=number] {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media screen and (min-width: 699px) {
+    .calculator {
+        flex-direction: row;
+        gap: 1.5em;
+    }
+
+    .input-section {
+        flex: 50%;
+    }
+
+    .display-calculations {
+        flex: 50%;
+        gap: 0;
+        grid-template-rows: 1fr 1fr 2.8fr;
+    }
+
+    .percentage-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .reset-btn {
+        align-self: flex-end;
+    }
 }
