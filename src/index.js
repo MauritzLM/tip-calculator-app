@@ -7,7 +7,7 @@ const myCalculator = calculator();
 // total amount input - to get total
 const billTotal = document.querySelector("#total");
 // percentage div selected or custom number input - to get percentage
-const percentageSelect = document.querySelectorAll(".select-tip-section div");
+const percentageSelect = document.querySelectorAll(".select-tip-section .percentage");
 const customPercentage = document.querySelector("#custom-percentage");
 // number of people input
 const numberOfPeople = document.querySelector("#people");
@@ -36,22 +36,51 @@ document.addEventListener("input", (e) => {
 
 // select percentage add class on click
 document.addEventListener("click", (e) => {
-    if (e.target.matches(".select-tip-section div")) {
+    if (e.target.matches(".select-tip-section .percentage")) {
         percentageSelect.forEach(div => {
-            div.className = "";
+            div.className = "percentage";
         });
         customPercentage.value = '';
-        e.target.className = "selected";
+        e.target.className = "percentage selected";
 
-        // calculate totals*
+        // calculate totals
+
+        let tip = getTipPercentage(percentageSelect, customPercentage.value, "selected");
+
+        let tipAmount = myCalculator.calculateTip(billTotal.value, tip);
+        let calculatedTip = myCalculator.tipPerPerson(tipAmount, numberOfPeople.value);
+
+        // calculate total pp
+        let calculatedTotal = myCalculator.totalPerPerson(Number(billTotal.value), tipAmount, numberOfPeople.value);
+
+        // update display
+        displayAmount(displayTip, calculatedTip);
+        displayAmount(displayTotal, calculatedTotal);
     };
 
+    // selecting custom percetage removes selected percentage
     if (e.target.matches("#custom-percentage")) {
         percentageSelect.forEach(div => {
-            div.className = "";
+            div.className = "percentage";
         });
     };
+
+    // reset button
+    if (e.target.matches(".reset-btn")) {
+        // remove selected class
+        percentageSelect.forEach(div => {
+            div.className = "percentage";
+        });
+
+        // input values
+        billTotal.value = '';
+        customPercentage.value = '';
+        numberOfPeople.value = '';
+
+        // display totals
+        displayAmount(displayTip, 0.00);
+        displayAmount(displayTotal, 0.00);
+    }
 });
 
-// reset button*
 
