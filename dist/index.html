@@ -19,7 +19,9 @@
 
 <body>
   <main>
-    <img src="../src/images/logo.svg" alt="">
+    <div class="logo-container">
+      <img src="../src/images/logo.svg" alt="">
+    </div>
 
     <div class="calculator">
 
@@ -27,7 +29,7 @@
       <div class="input-section">
         <label for="total">Bill</label>
         <input type="number" id="total">
-        <img src="../src/images/icon-dollar.svg" alt="">
+        <img class="dollar-icon" src="../src/images/icon-dollar.svg" alt="">
 
         <div class="select-tip-section">
           <p>Select Tip %</p>
@@ -37,27 +39,29 @@
             <div class="percentage">15%</div>
             <div class="percentage">25%</div>
             <div class="percentage">50%</div>
-            <input type="number" name="" id="custom-percentage" placeholder="custom">
+            <input type="number" name="" id="custom-percentage" placeholder="Custom">
           </div>
         </div>
 
         <label for="people">Number of People</label>
         <input type="number" id="people">
-        <img src="../src/images/icon-person.svg" alt="">
+        <img class="person-icon" src="../src/images/icon-person.svg" alt="">
       </div>
 
       <!-- display calculations -->
       <div class="display-calculations">
-        <div>
-          <p>Tip Amount
-            / person</p>
-          <p class="display-tip-amount">$ 0.00</p>
+        <div class="amount-container">
+          <p>Tip Amount <br>
+            <span>/ person</span>
+          </p>
+          <p class="display-tip-amount">$0.00</p>
         </div>
 
-        <div>
-          <p>Total
-            / person</p>
-          <p class="display-total-amount">$ 0.00</p>
+        <div class="amount-container">
+          <p>Total <br>
+            <span>/ person</span>
+          </p>
+          <p class="display-total-amount">$0.00</p>
         </div>
         <button class="reset-btn">Reset</button>
 
