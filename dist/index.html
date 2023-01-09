@@ -27,19 +27,23 @@
       <div class="input-section">
         <label for="total">Bill</label>
         <input type="number" id="total">
+        <img src="../src/images/icon-dollar.svg" alt="">
 
         <div class="select-tip-section">
           <p>Select Tip %</p>
-          <div>5%</div>
-          <div>10%</div>
-          <div>15%</div>
-          <div>25%</div>
-          <div>50%</div>
-          <input type="number" name="" id="custom-percentage" placeholder="custom">
+          <div class="percentage-container">
+            <div class="percentage">5%</div>
+            <div class="percentage">10%</div>
+            <div class="percentage">15%</div>
+            <div class="percentage">25%</div>
+            <div class="percentage">50%</div>
+            <input type="number" name="" id="custom-percentage" placeholder="custom">
+          </div>
         </div>
 
         <label for="people">Number of People</label>
         <input type="number" id="people">
+        <img src="../src/images/icon-person.svg" alt="">
       </div>
 
       <!-- display calculations -->
@@ -55,7 +59,7 @@
             / person</p>
           <p class="display-total-amount">$ 0.00</p>
         </div>
-        <button>Reset</button>
+        <button class="reset-btn">Reset</button>
 
       </div>
     </div>
