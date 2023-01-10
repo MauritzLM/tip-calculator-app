@@ -16,6 +16,9 @@ const numberOfPeople = document.querySelector("#people");
 const displayTip = document.querySelector(".display-tip-amount");
 const displayTotal = document.querySelector(".display-total-amount");
 
+// reset button
+const resetButton = document.querySelector(".reset-btn");
+
 // event listener to calculate amount when number inputs are used
 document.addEventListener("input", (e) => {
     if (e.target.matches("input[type='number']")) {
@@ -31,6 +34,8 @@ document.addEventListener("input", (e) => {
         // update display
         displayAmount(displayTip, calculatedTip);
         displayAmount(displayTotal, calculatedTotal);
+
+        resetButton.removeAttribute("disabled");
     }
 });
 
