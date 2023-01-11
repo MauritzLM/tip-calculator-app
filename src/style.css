@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* general styles */
 html {
     font-size: 10px;
     font-family: 'Space Mono', monospace;
@@ -20,6 +21,7 @@ body {
     position: relative;
 }
 
+/* Typography */
 p {
     font-size: 1.5rem;
     color: hsl(0, 0%, 100%);
@@ -36,17 +38,14 @@ label,
     margin: 1.2em 0;
 }
 
-/* main {
-    background-color: hsl(185, 41%, 84%);
-    
-}  */
-
+/* logo img */
 .logo-container {
     text-align: center;
     margin-bottom: 1.4em;
     margin-top: 4em;
 }
 
+/* calculator */
 .calculator {
     padding: 1em 1.2em;
     background-color: hsl(0, 0%, 100%);
@@ -56,18 +55,21 @@ label,
     gap: .8em;
 }
 
-/* .input-section {
-    position: relative;
-} */
-
+/* input section */
 input,
 button {
     font: inherit;
-    appearance: none;
     width: 100%;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+/* remove arrows from number input for chrome, safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input {
@@ -81,10 +83,6 @@ input {
     display: inherit;
 }
 
-/* .dollar-icon {
-    top: ;
-} */
-
 input[type=number] {
     appearance: textfield;
     display: block;
@@ -94,6 +92,7 @@ input[type=number] {
     color: hsl(183, 100%, 15%);
 }
 
+/* select percentage section */
 .select-tip-section {
     margin-bottom: 1em;
 }
@@ -104,10 +103,6 @@ input[type=number] {
     gap: .7em;
 }
 
-/* #custom-percentage {
-    color: hsl(186, 14%, 43%);
-} */
-
 .percentage {
     background-color: hsl(183, 100%, 15%);
     text-align: center;
@@ -117,16 +112,12 @@ input[type=number] {
     cursor: pointer;
 }
 
-/* label {
-    display: block;
-} */
-
+/* show calulations section */
 .display-calculations {
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
     padding: 1.5em 1em 1em 1em;
     display: grid;
-    /* flex-direction: column; */
     gap: .8em;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -138,10 +129,6 @@ input[type=number] {
     align-items: center;
     height: max-content;
 }
-
-/* .amount-container p {
-    font
-}  */
 
 .amount-container p span {
     font-size: 1.3rem;
@@ -169,6 +156,7 @@ button:disabled {
     background-color: hsl(183, 97%, 25%);
 }
 
+/* hover styles */
 button:hover,
 .percentage:hover {
     background-color: hsl(172, 70%, 77%);
@@ -180,11 +168,13 @@ input:focus {
     outline: 2px solid hsl(172, 67%, 45%);
 }
 
+/* show selected */
 .selected {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }
 
+/* footer */
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -198,26 +188,22 @@ input:focus {
 /* Media Queries */
 @media screen and (min-width: 699px) {
 
+    /* logo img */
     .logo-container {
         margin: 0;
         position: relative;
         bottom: 2.5em;
     }
 
+    /* calculator */
     .calculator {
         flex-direction: row;
         gap: 1.5em;
     }
 
+    /* input section */
     .input-section {
         flex: 50%;
-    }
-
-    .display-calculations {
-        flex: 50%;
-        gap: .8em;
-        grid-template-rows: 1fr 1fr 2.2fr;
-        padding: 1.5em 1.4em;
     }
 
     .percentage-container {
@@ -231,6 +217,14 @@ input:focus {
 
     #custom-percentage::placeholder {
         text-align: center;
+    }
+
+    /* show calculations section */
+    .display-calculations {
+        flex: 50%;
+        gap: .8em;
+        grid-template-rows: 1fr 1fr 2.2fr;
+        padding: 1.5em 1.4em;
     }
 
     .amount-container .display-total-amount,

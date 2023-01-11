@@ -9,7 +9,7 @@ export const getTipPercentage = (arr, value, style) => {
     if (!value) {
         arr.forEach(element => {
             if (element.classList.contains(style)) {
-                // get only the number
+                // get only the number without %
                 percentage = element.textContent.slice(0, -1);
             }
 

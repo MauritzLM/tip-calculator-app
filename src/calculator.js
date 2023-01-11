@@ -4,6 +4,7 @@ export const calculator = () => {
     const calculateTip = (total, percentage) => {
         const num = percentage / 100;
 
+        // return amount with no rounding
         return Math.floor((total * num) * 100) / 100;
     }
 

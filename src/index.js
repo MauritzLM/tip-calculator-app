@@ -77,12 +77,12 @@ document.addEventListener("click", (e) => {
             div.className = "percentage";
         });
 
-        // input values
+        // reset input values
         billTotal.value = '';
         customPercentage.value = '';
         numberOfPeople.value = '';
 
-        // display totals
+        // reset display totals
         displayAmount(displayTip, 0.00);
         displayAmount(displayTotal, 0.00);
     }
