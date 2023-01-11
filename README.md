@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://your-solution-url.com)
+- Live Site URL: [live site URL](https://mauritzlm.github.io/tip-calculator-app/)
 
 ## My process
 
@@ -51,15 +51,6 @@ Users should be able to:
 I learned about event delegation. Setting the event listener on a parent element and then using element.matches() with the css selector of the element.
 This is very useful if one adds elements to the page dynamically.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 ```js
 document.addEventListener("input", (e) => {
     if (e.target.matches("input[type='number']")) {
@@ -70,17 +61,14 @@ document.addEventListener("input", (e) => {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-1. writing maintainable code 
+I want to continue improving my workflow and writing maintainable code.
 
 ### Useful resources
 
 - [event listeners guide](https://blog.webdevsimplified.com/2022-01/event-listeners/) - Guide about events and event delegation.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@MauritzLM](https://www.frontendmentor.io/profile/yourusername)
 
 
