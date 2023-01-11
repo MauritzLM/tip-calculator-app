@@ -6,7 +6,7 @@
 html {
     font-size: 10px;
     font-family: 'Space Mono', monospace;
-    height: 100vh;
+    overflow: auto;
 }
 
 body {
@@ -42,7 +42,7 @@ label,
 .logo-container {
     text-align: center;
     margin-bottom: 1.4em;
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 /* calculator */
@@ -187,6 +187,9 @@ input:focus {
 
 /* Media Queries */
 @media screen and (min-width: 699px) {
+    html {
+        height: 100vh;
+    }
 
     /* logo img */
     .logo-container {
